@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Form = () => {
+const AddTodo = () => {
     const [todo, setTodo] = useState("");
 
     return (
@@ -11,4 +11,4 @@ const Form = () => {
     );
 };
 
-export default Form;
+export default AddTodo;
