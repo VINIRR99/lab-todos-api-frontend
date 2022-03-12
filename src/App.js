@@ -1,9 +1,10 @@
 import "./App.css";
+import Title from "./components/title";
 
 const App = () => {
-  return (
-    <>OI!!</>
-  );
+  return <>
+    <Title />
+  </>;
 }
 
 export default App;
