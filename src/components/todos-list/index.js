@@ -21,16 +21,16 @@ const list = [
 
 const TodosList = () => {
     const [todos, setTodos] = useState([]);
-    
+
     const [test, setTest] = useState([]);
 
     useEffect(() => (async () => {
         setTodos(list);
 
-        setTest(await todosApi.test());
+        setTest(await todosApi.getTodos());
     })(), []);
 
-    console.log("Test", test)
+    console.log("Test", test);
 
     return (
         <div>
