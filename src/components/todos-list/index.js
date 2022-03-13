@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { todosApi } from "../../utils/todosApi";
 
 const list = [
     {
@@ -20,8 +21,16 @@ const list = [
 
 const TodosList = () => {
     const [todos, setTodos] = useState([]);
+    
+    const [test, setTest] = useState([]);
 
-    useEffect(() => (async () => setTodos(list))(), []);
+    useEffect(() => (async () => {
+        setTodos(list);
+
+        setTest(await todosApi.test());
+    })(), []);
+
+    console.log("Test", test)
 
     return (
         <div>
