@@ -13,8 +13,8 @@ class TodosApi {
     };
     getTodos = async () => {
         try {
-            const response = await this.api("/");
-            return response;
+            const { data } = await this.api("/");
+            return data;
         } catch (error) {throw new Error(`Cannot get "Todos" => ${error}`)}
     };
 };
