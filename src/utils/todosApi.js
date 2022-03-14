@@ -25,7 +25,7 @@ class TodosApi {
     deleteTodo = async id => {
         try {
             await this.api.delete(`/${id}`)
-        } catch (error) {throw new Error(`Error while deleting todo with id equal to ${id}  => ${error}`)};
+        } catch (error) {throw new Error(`Error while deleting todo with id equal to "${id}"  => ${error}`)};
     };
 };
 
