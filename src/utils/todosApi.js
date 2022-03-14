@@ -14,7 +14,13 @@ class TodosApi {
         try {
             const { data } = await this.api.post("/", { title: todo });
             return data;
-        } catch (error) {throw new Error(`Error while creating "${todo}": ${error}`)};
+        } catch (error) {throw new Error(`Error while creating "${todo}" => ${error}`)};
+    };
+    updateCompleted = async (id, toggle) => {
+        try {
+            const { data } = await this.api.put(`/${id}`, { completed: toggle });
+            return data;
+        } catch (error) {throw new Error(`Error while updating todo => ${error}`)};
     };
 };
 
