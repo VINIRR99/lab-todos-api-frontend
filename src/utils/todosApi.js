@@ -6,9 +6,15 @@ class TodosApi {
     };
     getTodos = async () => {
         try {
-            const { data } = await this.api("/");
+            const { data } = await this.api.get("/");
             return data;
         } catch (error) {throw new Error(`Cannot get "Todos" => ${error}`)}
+    };
+    postTodo = async todo => {
+        try {
+            const { data } = await this.api.post("/", { title: todo });
+            return data;
+        } catch (error) {throw new Error(`Error while creating "${todo}": ${error}`)};
     };
 };
 

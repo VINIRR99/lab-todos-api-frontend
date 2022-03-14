@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { todosApi } from "./utils/todosApi";
 import Title from "./components/title";
-import AddTodo from "./components/form";
+import AddTodo from "./components/add-todo";
 import TodosList from "./components/todos-list";
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
   return <>
     <Title />
     <section style={{margin: "0 15px"}}>
-      <AddTodo />
+      <AddTodo todos={todos} setTodos={setTodos} />
       <TodosList todos={todos} />
     </section>
   </>;
