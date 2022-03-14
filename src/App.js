@@ -14,7 +14,7 @@ const App = () => {
     <Title />
     <section style={{margin: "0 15px"}}>
       <AddTodo todos={todos} setTodos={setTodos} />
-      <TodosList todos={todos} />
+      <TodosList todos={todos} setTodos={setTodos} />
     </section>
   </>;
 }
