@@ -1,7 +1,12 @@
 const TodosList = ({ todos }) => {
     return (
         <div>
-            {todos.map(todo => <h2 key={todo._id}>{todo.title}</h2>)}
+            {todos.map(todo => (
+                <div key={todo._id}>
+                    <input type="checkbox" checked={todo.completed} />
+                    {todo.title}
+                </div>
+            ))}
         </div>
     );
 };

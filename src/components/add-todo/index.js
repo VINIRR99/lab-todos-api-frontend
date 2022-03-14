@@ -2,18 +2,18 @@ import { useState } from "react";
 import { todosApi } from "../../utils/todosApi";
 
 const AddTodo = ({ todos, setTodos }) => {
-    const [todo, setTodo] = useState("");
+    const [title, setTitle] = useState("");
 
     const handleSubmit = event => {
         event.preventDefault();
 
-        if (todo.length !== 0) {
-            alert(`Adding "${todo}" to the list`);
+        if (title.length !== 0) {
+            alert(`Adding "${title}" to the list`);
 
             (async () => {
-                const newTodo = await todosApi.postTodo(todo);
+                const newTodo = await todosApi.postTodo(title);
                 setTodos([...todos, newTodo]);
-                setTodo("");
+                setTitle("");
             })();
         } else {
             alert("Please add a Todo");
@@ -22,7 +22,7 @@ const AddTodo = ({ todos, setTodos }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" value={todo} onChange={e => setTodo(e.target.value)} />
+            <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
             <button>Adicionar</button>
         </form>
     );
