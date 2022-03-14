@@ -20,7 +20,12 @@ class TodosApi {
         try {
             const { data } = await this.api.put(`/${id}`, { completed: toggle });
             return data;
-        } catch (error) {throw new Error(`Error while updating todo => ${error}`)};
+        } catch (error) {throw new Error(`Error while updating todo with id equal to "${id}" => ${error}`)};
+    };
+    deleteTodo = async id => {
+        try {
+            await this.api.delete(`/${id}`)
+        } catch (error) {throw new Error(`Error while deleting todo with id equal to ${id}  => ${error}`)};
     };
 };
 
