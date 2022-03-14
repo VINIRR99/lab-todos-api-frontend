@@ -13,6 +13,7 @@ const TodosList = ({ todos, setTodos }) => {
                 <div key={todo._id}>
                     <input type="checkbox" checked={todo.completed} onChange={e => handleChange(e, todo._id)} />
                     {todo.title}
+                    <button>Delete</button>
                 </div>
             ))}
         </div>
