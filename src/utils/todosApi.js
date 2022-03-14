@@ -2,7 +2,7 @@ import axios from "axios";
 
 class TodosApi {
     constructor () {
-        this.api = axios.create({ baseURL: `${process.env.REACT_APP_TODOS_KEY}/todo` });
+        this.api = axios.create({ baseURL: `${process.env.REACT_APP_TODO_URL}/todo` });
     };
     getTodos = async () => {
         try {
