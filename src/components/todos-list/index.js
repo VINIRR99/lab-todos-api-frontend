@@ -1,5 +1,5 @@
 import { todosApi } from "../../utils/todosApi";
-import { Div, Button } from "./styles";
+import { Todo, Button } from "./styles";
 
 const TodosList = ({ todos, setTodos }) => {
     const handleChange = async (event, id) => {
@@ -17,13 +17,13 @@ const TodosList = ({ todos, setTodos }) => {
     return (
         <div>
             {todos.map(todo => (
-                <Div key={todo._id} completed={todo.completed}>
+                <Todo key={todo._id} completed={todo.completed}>
                     <span>
                         <input type="checkbox" checked={todo.completed} onChange={e => handleChange(e, todo._id)} />
                         {todo.title}
                     </span>
                     <Button onClick={() => handleClick(todo._id)}>x</Button>
-                </Div>
+                </Todo>
             ))}
         </div>
     );

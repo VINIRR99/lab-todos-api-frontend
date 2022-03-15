@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const Div = styled.div`
+export const Todo = styled.div`
     background-color: #f5f5f5;
     height: 40px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    padding: 0 10px 0 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
