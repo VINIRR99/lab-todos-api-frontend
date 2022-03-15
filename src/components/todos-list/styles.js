@@ -13,7 +13,7 @@ export const Todo = styled.div`
     }
 `;
 
-export const Button = styled.button`
+export const DeleteButton = styled.button`
     background-color: #e54f2d;
     width: 20px;
     height: 20px;

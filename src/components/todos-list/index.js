@@ -1,5 +1,5 @@
 import { todosApi } from "../../utils/todosApi";
-import { Todo, Button } from "./styles";
+import { Todo, DeleteButton } from "./styles";
 
 const TodosList = ({ todos, setTodos }) => {
     const handleChange = async (event, id) => {
@@ -22,7 +22,7 @@ const TodosList = ({ todos, setTodos }) => {
                         <input type="checkbox" checked={todo.completed} onChange={e => handleChange(e, todo._id)} />
                         {todo.title}
                     </span>
-                    <Button onClick={() => handleClick(todo._id)}>x</Button>
+                    <DeleteButton onClick={() => handleClick(todo._id)}>x</DeleteButton>
                 </Todo>
             ))}
         </div>
