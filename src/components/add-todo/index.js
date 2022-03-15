@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { todosApi } from "../../utils/todosApi";
+import { Form, AddButton } from "./styles";
 
 const AddTodo = ({ todos, setTodos }) => {
     const [title, setTitle] = useState("");
@@ -21,10 +22,10 @@ const AddTodo = ({ todos, setTodos }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
             <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
-            <button>Adicionar</button>
-        </form>
+            <AddButton>Adicionar</AddButton>
+        </Form>
     );
 };
 
