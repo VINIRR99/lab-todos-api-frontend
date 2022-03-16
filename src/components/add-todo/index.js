@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { todosApi } from "../../utils/todosApi";
+import todosApi from "../../utils/todosApi";
 import { Form, AddButton } from "./styles";
 
 const AddTodo = ({ todos, setTodos }) => {

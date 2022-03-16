@@ -1,4 +1,4 @@
-import { todosApi } from "../../utils/todosApi";
+import todosApi from "../../utils/todosApi";
 import { Todo, DeleteButton } from "./styles";
 
 const TodosList = ({ todos, setTodos }) => {

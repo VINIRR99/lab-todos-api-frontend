@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { todosApi } from "./utils/todosApi";
+import todosApi from "./utils/todosApi";
 import Title from "./components/title";
 import AddTodo from "./components/add-todo";
 import TodosList from "./components/todos-list";
